@@ -1,0 +1,70 @@
+.page {
+    font-family: Lato, serif;
+    background: #8d8d8d;
+}
+
+.header {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: lightgray;
+    box-shadow: 5px 5px 30px #505050;
+}
+
+.game-field {
+    display: grid;
+    margin: 50px auto 0;
+    max-width: 160px;
+    max-height: 160px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    outline: 5px;
+}
+
+.game-cell {
+    width: 50px;
+    height: 50px;
+    background: white;
+    appearance: none;
+    border: 0;
+}
+
+.game-cell:hover {
+    background: #b7b7b7;
+}
+
+.output-field {
+    width: 150px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: gray;
+}
+
+.reset-button {
+    margin: 20px auto 0;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 10px;
+    color: #b7b7b7;
+    background: white;
+}
+
+.reset-button:hover {
+    color: white;
+    background: #b7b7b7;
+}
