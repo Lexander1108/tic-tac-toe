@@ -1,14 +1,22 @@
+:root {
+    --white: white;
+    --lightgray: #D3D3D3FF;
+    --gray: #8d8d8d;
+    --darkgray: #505050;
+}
+
 .page {
-    font-family: Lato, serif;
-    background: #8d8d8d;
+    font-family: Arial, serif;
+    background: var(--gray);
 }
 
 .header {
     margin-top: 40px;
     text-align: center;
     font-size: 40px;
-    color: white;
+    color: var(--white);
 }
+
 
 .game-window {
     display: flex;
@@ -19,8 +27,8 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    background: lightgray;
-    box-shadow: 5px 5px 30px #505050;
+    background: var(--lightgray);
+    box-shadow: 5px 5px 30px var(--darkgray);
 }
 
 .game-field {
@@ -33,23 +41,34 @@
     outline: 5px;
 }
 
-.game-cell {
+[data--cell] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     width: 50px;
     height: 50px;
-    background: white;
-    appearance: none;
+    background: var(--white);
+    color: var(--lightgray);
     border: 0;
+    outline: 2px solid var(--lightgray);
 }
 
-.game-cell:hover {
-    background: #b7b7b7;
+.x-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.game-field [data--cell]:hover {
+    background: var(--lightgray);
+    color: var(--white);
 }
 
 .output-field {
     width: 150px;
     margin: 20px auto 0;
     text-align: center;
-    color: gray;
+    color: var(--gray);
 }
 
 .reset-button {
@@ -60,11 +79,11 @@
     text-transform: uppercase;
     border: 0;
     border-radius: 10px;
-    color: #b7b7b7;
-    background: white;
+    color: var(--gray);
+    background: var(--white);
 }
 
 .reset-button:hover {
-    color: white;
-    background: #b7b7b7;
+    color: var(--white);
+    background: var(--gray);
 }
