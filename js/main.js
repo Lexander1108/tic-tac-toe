@@ -1,9 +1,14 @@
 const gameCell = document.querySelectorAll('[data--cell]');
 const outputField = document.querySelector('.output-field');
 const resetButton = document.querySelector('.reset-button');
+const playerXScore = document.querySelector('.playerXScore');
+const playerOScore = document.querySelector('.playerOScore');
 
 const xPositions = [];
 const oPositions = [];
+
+let xScore = 0;
+let oScore = 0;
 
 const winCombinations = [
     [1, 2, 3],
@@ -56,9 +61,15 @@ function clickHandler(event) {
 
 function declareWinner (xPositions, oPositions, winCombinations) {
     if (checkForWin(xPositions, winCombinations) === true) {
-        outputField.innerHTML = 'Player X win';
+        xScore++;
+        outputField.innerHTML = 'Player X wins';
+        localStorage.setItem('xScore', xScore.toString());
+        playerXScore.innerHTML = `Player X: ${localStorage.getItem('xScore')}`;
     } else if (checkForWin(oPositions, winCombinations) === true) {
-        outputField.innerHTML = 'Player O win';
+        oScore++;
+        outputField.innerHTML = 'Player O wins';
+        localStorage.setItem('oScore', oScore.toString());
+        playerOScore.innerHTML = `Player O: ${localStorage.getItem('oScore')}`;
     }
 }
 
