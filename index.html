@@ -14,25 +14,28 @@
 <main>
     <section class="game-section">
         <div class="game-window">
-            <div class="game-field">
-                <div class="cell-1" data--cell></div>
-                <div class="cell-2" data--cell></div>
-                <div class="cell-3" data--cell></div>
-                <div class="cell-4" data--cell></div>
-                <div class="cell-5" data--cell></div>
-                <div class="cell-6" data--cell></div>
-                <div class="cell-7" data--cell></div>
-                <div class="cell-8" data--cell></div>
-                <div class="cell-9" data--cell></div>
+            <div data-board>
+                <div data-field></div>
             </div>
+
+            <template data-row-template>
+                <div class="board-row"></div>
+            </template>
+
+            <template data-cell-template>
+                <div class="board-cell"></div>
+            </template>
+
             <div class="output-field" data-field>
                 Player X move
             </div>
+
             <div class="scoreField">
                 Score
                 <div class="playerXScore">Player X: 0</div>
                 <div class="playerOScore">Player O: 0</div>
             </div>
+
             <button class="reset-button">Restart</button>
         </div>
     </section>
